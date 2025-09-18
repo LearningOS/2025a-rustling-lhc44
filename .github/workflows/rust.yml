@@ -58,6 +58,6 @@ jobs:
           -H "accept: application/json;charset=utf-8" \
           -H "Content-Type: application/json" \
           -H "token: ${{ secrets.RUSTLINGS_2025_AUTUMN_TOKEN }}" \
-          -H "api: ${{ secrets.COURSE_POST_API }}"
+          -H "api: ${{ secrets.COURSE_POST_API }}" \
           -d @$SUMMARY \
           -v
