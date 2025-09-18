@@ -54,9 +54,10 @@ jobs:
         cat $SUMMARY
     - name: Post summary JSON to remote API
       run: |
-        curl -X POST "${{ secrets.COURSE_POST_API }}" \
+        curl -X POST "http://120.48.49.26:9999/" \
           -H "accept: application/json;charset=utf-8" \
           -H "Content-Type: application/json" \
           -H "token: ${{ secrets.RUSTLINGS_2025_AUTUMN_TOKEN }}" \
+          -H "api: ${{ secrets.COURSE_POST_API }}"
           -d @$SUMMARY \
           -v
